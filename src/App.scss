@@ -224,5 +224,33 @@
         }
       }
     }
+
+    .recently-viewed-container > div {
+      display:inline-block;
+    }
+
+    .recently-viewed-container {
+      height:15rem;
+      width:100%;
+      padding:2rem 0;
+
+      .todays-deals, .recently-viewed {
+        display: inline-block;
+        height:100%;
+      }
+
+      .todays-deals {
+        img {
+          height:100%;
+        }
+      }
+
+      .recently-viewed {
+        width: calc(100% - 38.75rem);
+        background-color:#ffffff;
+        margin-left:2rem;
+        vertical-align: top;
+      }
+    }
   }
 }

@@ -12,35 +12,35 @@ export default function Categories() {
         <div className="categories-container">
             <div>
                 <div className="categories-list categories-show-all" >
-                    <img src={categories} />
+                    <img src={categories} alt="categories" />
                     Show all categories
                 </div>
             </div>
             <div>
                 <div className="categories-list categories-my-catalog" >
-                    <img src={catalog} />
+                    <img src={catalog} alt="catalog"  />
                     My Catalog
                 </div>
                 <div className="categories-list categories-my-list" >
-                    <img src={list} />
+                    <img src={list} alt="list"  />
                     My List
                 </div>
                 <div className="categories-list categories-live-help" >
-                    <img src={help} />
+                    <img src={help} alt="help"  />
                     Live Help
                 </div>
             </div>
             <div>
                 <div className="categories-list categories-pim" >
-                    <img src={pim} />
+                    <img src={pim} alt="pim"  />
                     PIM
                 </div>
                 <div className="categories-list categories-account" >
-                    <img src={account} />
+                    <img src={account} alt="account"  />
                     Account
                 </div>
                 <div className="categories-list categories-branch-locations" >
-                    <img src={locations} />
+                    <img src={locations} alt="locations"  />
                     Branch Locations
                 </div>
             </div>

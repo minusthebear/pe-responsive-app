@@ -97,27 +97,130 @@
     padding:1rem 3rem;
 
     .product-markets-container {
-      font-weight: bold;
 
       .product-markets-header {
         padding:.5rem;
         font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .product-markets-types > div {
+        box-shadow: 0.125rem 0.125rem 0.25rem 0.25rem rgba(0,0,0,0.25);
+        margin:1rem .25rem;
       }
 
       .product-markets-types {
         width:100%;
         padding:.5rem 0;
         display:flex;
-        flex-wrap:nowrap;
+        flex-wrap:wrap;
         justify-content:space-between;
         align-items:stretch;
         align-content:center;
 
         div {
-          height:8rem;
-          width:4rem;
-          display:inline-flex;
-          box-shadow: 0.125rem 0.125rem 0.25rem 0.25rem rgba(0,0,0,0.25);
+          background-color:#ffffff;
+          width:10rem;
+
+          img {
+            width:100%;
+            display:block;
+          }
+
+          .product-market-types-description {
+            display:table;
+            text-align:center;
+            height:8rem;
+            div {
+              display:table-cell;
+              vertical-align: middle;
+              font-weight: bold;
+              font-size:1.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .product-markets-container {
+        display:none;
+      }
+    }
+
+
+    @media screen and (max-width: 1070px) {
+      .get-started-container {
+        display:block;
+        padding:2rem 0;
+
+        .become-member-container, .get-started-today {
+          padding-top:0;
+        }
+      }
+    }
+
+
+    @media screen and (min-width: 1071px) {
+
+      .get-started-container > div {
+        padding:2rem;
+        display:inline-block;
+        width:50%;
+      }
+
+      .get-started-container {
+        display:flex;
+        justify-content:space-between;
+        align-items:stretch;
+        align-content:center;
+
+        .get-started-today {
+          padding-top:3rem;
+        }
+      }
+    }
+
+    .get-started-container {
+      background-color:#ffffff;
+      width:100%;
+
+      img {
+        height:16.375rem;
+      }
+
+      .get-started-today, .become-member-today {
+        font-weight:bold;
+      }
+
+      .get-started-today {
+        font-size:2rem;
+      }
+
+      .become-member-today {
+        font-size:1.6rem;
+        span {
+          color:#008800;
+        }
+      }
+
+      .platt-plus-member-button-container {
+        display:inline-block;
+      }
+
+      .platt-plus-member-button {
+        margin-top:3rem;
+        display:table;
+        position:relative;
+        text-align:center;
+        width:20rem;
+        height:3rem;
+        border-radius:2rem;
+        background-color:#eeeeee;
+
+        div {
+          display: table-cell;
+          vertical-align: middle;
         }
       }
     }

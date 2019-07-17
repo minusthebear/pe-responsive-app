@@ -56,6 +56,11 @@
     div {
       width:100%;
       display:table;
+
+      div > img {
+        width:1.5rem;
+        margin-right:1rem;
+      }
     }
 
     .categories-list {
@@ -65,7 +70,7 @@
       height:2rem;
       font-size:1.5rem;
       padding:1rem 0;
-      border:1px solid #000000;
+      border:1px solid #bbbbbb;
       box-sizing:border-box;
 
       &.categories-show-all {
@@ -74,10 +79,47 @@
 
       &.categories-my-catalog,
       &.categories-my-list,
-      &.categories-live-help {
+      &.categories-live-help,
+      &.categories-pim,
+      &.categories-account,
+      &.categories-branch-locations {
         width:33.33%
       }
 
+      &.categories-account > img {
+        filter: invert(100%);
+      }
+    }
+  }
+
+  .platt-main-body {
+    background-color:#eeeeee;
+    padding:1rem 3rem;
+
+    .product-markets-container {
+      font-weight: bold;
+
+      .product-markets-header {
+        padding:.5rem;
+        font-size: 1.5rem;
+      }
+
+      .product-markets-types {
+        width:100%;
+        padding:.5rem 0;
+        display:flex;
+        flex-wrap:nowrap;
+        justify-content:space-between;
+        align-items:stretch;
+        align-content:center;
+
+        div {
+          height:8rem;
+          width:4rem;
+          display:inline-flex;
+          box-shadow: 0.125rem 0.125rem 0.25rem 0.25rem rgba(0,0,0,0.25);
+        }
+      }
     }
   }
 }

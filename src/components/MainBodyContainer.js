@@ -5,6 +5,7 @@ import RecentlyViewed from "./RecentlyViewed";
 import PlattExtras from "./PlattExtras";
 import DownloadPlattApp from "./DownloadPlattApp";
 import TodaysDeals from "./TodaysDeals";
+import MobileMenuOptions from "./MobileMenuOptions";
 
 export default function MainBodyContainer({ isMobile }) {
 
@@ -25,6 +26,7 @@ export default function MainBodyContainer({ isMobile }) {
     return (
         <div className="platt-main-body">
             <ProductMarkets />
+            { mobileView ? <MobileMenuOptions/> : null }
             { mobileView ? <TodaysDeals/> : null}
             <GetStarted/>
             <RecentlyViewed isMobile={isMobile} />

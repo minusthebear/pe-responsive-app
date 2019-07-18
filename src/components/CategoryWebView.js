@@ -37,7 +37,7 @@ export default function CategoryWebView() {
                     PIM
                 </div>
                 <div className="categories-list categories-account" >
-                    <img src={account} alt="account"  />
+                    <img className="categories-account-icon" src={account} alt="account"  />
                     Account
                 </div>
                 <div className="categories-list categories-branch-locations" >

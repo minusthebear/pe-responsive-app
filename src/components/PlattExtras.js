@@ -1,36 +1,30 @@
-import supeTool from "../images/img/super-tool-day.png";
-import location from "../images/img/ic_location_b.png";
-import helpCenter from "../images/img/ic_helpcenter.png";
-import plattU from "../images/img/ic_platt-u.png";
-import React from "react";
+import React, {useState, useEffect} from "react";
+import PlattExtrasWebView from "./PlattExtrasWebView";
+import PlattExtrasMobileView from "./PlattExtrasMobileView";
 
-export default function PlattExtras() {
+export default function PlattExtras({ isMobile }) {
+
+    let [ mobileView, setMobileView ] = useState(isMobile);
+
+    useEffect(() => {
+        window.addEventListener('resize', checkWindowWidthForExtras);
+
+        return () => {
+            window.removeEventListener('resize', checkWindowWidthForExtras);
+        }
+    }, []);
+
+    function checkWindowWidthForExtras() {
+        setMobileView(window.innerWidth <= 768);
+    }
+
+    function isMobileView() {
+        return mobileView ? <PlattExtrasMobileView/> : <PlattExtrasWebView/>;
+    }
+
     return (
         <div className="platt-extras">
-            <div>
-                <img src={supeTool} />
-                <div>
-                    <div>Super Tool Day & Dynamic Data Day</div>
-                </div>
-            </div>
-            <div>
-                <img src={location} />
-                <div>
-                    <div>Branch Locations</div>
-                </div>
-            </div>
-            <div>
-                <img src={helpCenter} />
-                <div>
-                    <div>Help Center</div>
-                </div>
-            </div>
-            <div>
-                <img src={plattU} />
-                <div>
-                    <div>Platt University</div>
-                </div>
-            </div>
+            { isMobileView() }
         </div>
     );
 }

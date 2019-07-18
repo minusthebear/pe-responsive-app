@@ -123,35 +123,17 @@
 
   }
 
-  .categories-container {
-    text-align:center;
-    display:block;
-    width:100%;
-    background-color:#ffffff;
 
-    div {
-      width:100%;
-      display:table;
 
-      div > img {
-        width:1.5rem;
-        margin-right:1rem;
-      }
+  @media screen and (max-width: 768px) {
+    .categories-container {
+      display:block;
     }
 
     .categories-list {
-      display:table-cell;
-      text-align:center;
-      vertical-align: middle;
-      height:2rem;
-      font-size:1.5rem;
-      padding:1rem 0;
-      border:1px solid #bbbbbb;
-      box-sizing:border-box;
-
-      &.categories-show-all {
-        width:100%;
-      }
+      display: block;
+      text-align:left;
+      padding:1rem;
 
       &.categories-my-catalog,
       &.categories-my-list,
@@ -159,10 +141,69 @@
       &.categories-pim,
       &.categories-account,
       &.categories-branch-locations {
-        width:33.33%
+        width:100%
+      }
+    }
+
+    .categories-list > img {
+      padding-right:1rem;
+
+      &.mobile-arrow-forward {
+        float:right;
+      }
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    .categories-container {
+      .categories-list {
+
+        display:table-cell;
+        text-align:center;
+        padding:1rem 0;
+
+        &.categories-my-catalog,
+        &.categories-my-list,
+        &.categories-live-help,
+        &.categories-pim,
+        &.categories-account,
+        &.categories-branch-locations {
+          width:33.33%
+        }
+      }
+    }
+  }
+
+  .categories-container > div {
+    width:100%;
+    display:table;
+  }
+
+  .categories-container {
+    text-align:center;
+    display:block;
+    width:100%;
+    background-color:#ffffff;
+
+    div {
+      div > img {
+        width:1.5rem;
+        margin-right:1rem;
+      }
+    }
+
+    .categories-list {
+      vertical-align: middle;
+      height:2rem;
+      font-size:1.5rem;
+      border:1px solid #bbbbbb;
+      box-sizing:border-box;
+
+      &.categories-show-all {
+        width:100%;
       }
 
-      &.categories-account > img {
+      &.categories-account > img.categories-account-icon {
         filter: invert(100%);
       }
     }
@@ -307,7 +348,17 @@
       display:inline-block;
     }
 
-
+    @media screen and (max-width: 768px) {
+      .todays-deals {
+        display:block;
+        width:calc(100% - 0.25rem);
+        margin:2rem 0;
+        box-shadow: 0.125rem 0.125rem 0.25rem 0.25rem rgba(0,0,0,0.25);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:cover;
+      }
+    }
 
     @media screen and (max-width: 1070px) {
       .get-started-container {
@@ -333,10 +384,9 @@
       }
 
       .todays-deals {
-        //width:calc(100% - 0.25rem);
-        img {
-          height:100%;
-        }
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:cover;
       }
 
       .recently-viewed {
@@ -376,48 +426,99 @@
     // platt-main-body
     //
 
-    .platt-extras {
 
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:space-between;
-      align-items:stretch;
-      align-content:center;
-    }
+    @media screen and (min-width: 769px) {
 
-    .platt-extras > div {
-      width:13.5rem;
-      height:15rem;
-      border:1px solid #000000;
-      margin-bottom:2rem;
-      box-shadow: 0.125rem 0.125rem 0.25rem 0.25rem rgba(0,0,0,0.25);
-      position:relative;
-      text-align: center;
-      background-color: #ffffff;
 
-      img {
-        padding-top:1rem;
-        width:9.5rem;
+      .platt-extras {
+
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-between;
+        align-items:stretch;
+        align-content:center;
+      }
+
+      .platt-extras > div {
+        width:13.5rem;
+        height:15rem;
+        border:1px solid #000000;
+        margin-bottom:2rem;
+        box-shadow: 0.125rem 0.125rem 0.25rem 0.25rem rgba(0,0,0,0.25);
+        position:relative;
+        text-align: center;
+        background-color: #ffffff;
+
+        img {
+          padding-top:1rem;
+          width:9.5rem;
+        }
+      }
+
+      .platt-extras > div > div {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding:1rem;
+        width:11.5rem;
+        text-align: center;
+        font-weight:bold;
+        font-size:1.25rem;
+        display:table;
+        height:3.5rem;
+
+        div {
+          display:table-cell;
+          vertical-align: middle;
+        }
       }
     }
 
-    .platt-extras > div > div {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      padding:1rem;
-      width:11.5rem;
-      text-align: center;
-      font-weight:bold;
-      font-size:1.25rem;
-      display:table;
-      height:3.5rem;
+    @media screen and (max-width: 768px) {
+      .platt-extras-mobile-view-container {
 
-      div {
-        display:table-cell;
-        vertical-align: middle;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-between;
+        align-items:stretch;
+        align-content:center;
+      }
+
+      .platt-extras-mobile-view-container > div {
+         width:13.5rem;
+         height:15rem;
+         border:1px solid #000000;
+         margin-bottom:2rem;
+         box-shadow: 0.125rem 0.125rem 0.25rem 0.25rem rgba(0,0,0,0.25);
+         position:relative;
+         text-align: center;
+         background-color: #ffffff;
+
+         img {
+           padding-top:1rem;
+           width:9.5rem;
+         }
+       }
+
+      .platt-extras-mobile-view-container > div > div {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding:1rem;
+        width:11.5rem;
+        text-align: center;
+        font-weight:bold;
+        font-size:1.25rem;
+        display:table;
+        height:3.5rem;
+
+        div {
+          display:table-cell;
+          vertical-align: middle;
+        }
       }
     }
+
 
     .download-platt-app > div {
       width:100%;

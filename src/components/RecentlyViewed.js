@@ -1,13 +1,27 @@
-import deal from "../images/panel/deal.png";
 import thingOne from "../images/recent/11.png";
 import thingTwo from "../images/recent/22.png";
-import React from "react";
+import React, {useState, useEffect} from "react";
 import TodaysDeals from "./TodaysDeals";
 
-export default function RecentlyViewed() {
+export default function RecentlyViewed({isMobile}) {
+
+    let [ mobileView, setMobileView ] = useState(isMobile);
+
+    useEffect(() => {
+        window.addEventListener('resize', checkWindowWidthForRecentlyViewed);
+
+        return () => {
+            window.removeEventListener('resize', checkWindowWidthForRecentlyViewed);
+        }
+    }, []);
+
+    function checkWindowWidthForRecentlyViewed() {
+        setMobileView(window.innerWidth <= 768);
+    }
+
     return (
         <div className="recently-viewed-container" >
-            <TodaysDeals/>
+            { mobileView ? null : <TodaysDeals/> }
             <div className="recently-viewed">
                 <div className="recently-viewed-header">
                     <div className="recently-viewed-title">Recently Viewed</div>

@@ -3,8 +3,6 @@ import React from "react";
 
 export default function TodaysDeals() {
     return (
-        <div className="todays-deals">
-            <img src={deal} alt="deal" />
-        </div>
+        <img className="todays-deals" src={deal} alt="deal" />
     );
 }

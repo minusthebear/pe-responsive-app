@@ -49,20 +49,16 @@
   }
 
   .platt-footer {
-    height:20rem;
-    width:100%;
-    background-color:#666666;
-    position:relative;
+    width:calc(100% - 4rem);
     color:#eeeeee;
+    background: transparent;
     font-weight:bold;
     font-size:1.6rem;
     padding:2rem;
 
     .platt-footer-menu > div {
       display:table;
-      height:8rem;
       padding:2rem;
-      background-color:#888888;
 
       div {
         display:table-cell;
@@ -71,11 +67,13 @@
     }
 
     .platt-footer-menu {
-      width:100%;
+      width:calc(100% - 4rem);
+      height:3rem;
       display:flex;
       justify-content:space-between;
       align-items:stretch;
       align-content:center;
+
     }
 
     .platt-footer-contact > div {
@@ -92,7 +90,7 @@
         display:inline-block;
 
         .live-help-button {
-          margin-top:3rem;
+          margin-top:2rem;
           width:20rem;
           height:4rem;
           display:table;
@@ -453,6 +451,10 @@
       height:18rem;
       background-color:#ffffff;
       position:relative;
+
+      .app-get-banner {
+        background-color:#000000;
+      }
     }
   }
 }

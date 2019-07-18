@@ -8,7 +8,7 @@ export default function DownloadPlattApp() {
                 <img src={banner} alt="banner"/>
             </div>
             <div className="download-platt-app-message">
-                <div>Shop better, download the Platt App today</div>
+                <div>Shop better, download the Platt App today rrweqrwqe</div>
             </div>
         </div>
     );

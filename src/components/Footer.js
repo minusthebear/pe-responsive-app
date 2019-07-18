@@ -29,7 +29,15 @@ export default function Footer() {
                 </div>
             </div>
             <div className="platt-footer-menu">
-
+                <div>
+                    <div>Contact Us</div>
+                </div>
+                <div>
+                    <div>What's New</div>
+                </div>
+                <div>
+                    <div>FAQ's</div>
+                </div>
             </div>
         </div>
     );

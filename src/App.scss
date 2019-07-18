@@ -58,6 +58,26 @@
     font-size:1.6rem;
     padding:2rem;
 
+    .platt-footer-menu > div {
+      display:table;
+      height:8rem;
+      padding:2rem;
+      background-color:#888888;
+
+      div {
+        display:table-cell;
+        vertical-align:middle;
+      }
+    }
+
+    .platt-footer-menu {
+      width:100%;
+      display:flex;
+      justify-content:space-between;
+      align-items:stretch;
+      align-content:center;
+    }
+
     .platt-footer-contact > div {
       padding:0.5rem;
       text-align:center;
@@ -101,16 +121,8 @@
           }
         }
       }
-
     }
 
-    .platt-footer-contact {
-
-    }
-
-    .platt-footer-menu {
-
-    }
   }
 
   .categories-container {

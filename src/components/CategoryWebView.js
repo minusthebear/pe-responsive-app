@@ -3,7 +3,7 @@ import catalog from "../images/ic/black/ic_playlist_add_check.png";
 import list from "../images/ic/black/ic_list.png";
 import help from "../images/ic/black/ic_comment.png";
 import pim from "../images/ic/black/ic_check_circle.png";
-import account from "../images/ic/white/ic_person.png";
+import manUser from "../images/ic/black/man-user.png";
 import locations from "../images/ic/black/ic_place.png";
 import React from "react";
 
@@ -37,7 +37,7 @@ export default function CategoryWebView() {
                     PIM
                 </div>
                 <div className="categories-list categories-account" >
-                    <img className="categories-account-icon" src={account} alt="account"  />
+                    <img className="categories-account-icon" src={manUser} alt="account"  />
                     Account
                 </div>
                 <div className="categories-list categories-branch-locations" >

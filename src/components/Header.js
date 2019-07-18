@@ -1,6 +1,7 @@
 import plattLogo from "../images/img/logo.png";
 import HeaderMenuItems from "./HeaderMenuItems";
 import React from "react";
+import SearchBar from "./SearchBar";
 
 export default function Header() {
     return (
@@ -13,9 +14,7 @@ export default function Header() {
                 </div>
                 <HeaderMenuItems/>
             </div>
-            <div className="platt-header-input-container">
-                <input className="platt-header-input" placeholder="What are you looking for?"/>
-            </div>
+            <SearchBar/>
         </div>
     );
 }

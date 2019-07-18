@@ -3,7 +3,7 @@ import catalog from "../images/ic/black/ic_playlist_add_check.png";
 import list from "../images/ic/black/ic_list.png";
 import help from "../images/ic/black/ic_comment.png";
 import pim from "../images/ic/black/ic_check_circle.png";
-import account from "../images/ic/white/ic_person.png";
+import manUser from "../images/ic/black/man-user.png";
 import locations from "../images/ic/black/ic_place.png";
 import arrowForward from '../images/ic/black/ic_arrow_forward.png';
 import React from "react";
@@ -38,7 +38,7 @@ export default function CategoryMobileView() {
                 <img className="mobile-arrow-forward" src={arrowForward} />
             </div>
             <div className="categories-list categories-account" >
-                <img className="categories-account-icon" src={account} alt="account" />
+                <img className="categories-account-icon" src={manUser} alt="account" />
                 Account
                 <img className="mobile-arrow-forward" src={arrowForward} />
             </div>
